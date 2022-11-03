@@ -1,0 +1,45 @@
+body {
+background-color: black;
+text-align: center;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+    opacity: 1;
+    }
+}
+
+.header{
+    animation: fade-in 3s;
+    font-family: 'Bungee Spice', cursive;
+}
+
+@keyframes change-color {
+
+    0% {
+        background-color: aqua;
+    }
+    25% {
+        background-color: aquamarine;
+    }
+    50% {
+        background-color: chartreuse;
+    }
+    75% {
+        background-color: greenyellow;
+    }
+    100% {
+        background-color: rgb(225, 156, 18);
+    }
+}
+.colorbox{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    padding: auto;
+    margin: auto;
+    animation: change-color 5s linear infinite;
+}

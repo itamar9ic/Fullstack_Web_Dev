@@ -1,0 +1,70 @@
+body {
+    background-image: url(https://i.pinimg.com/736x/d0/f2/07/d0f207b84e26d773a27fe2eb1288245a.jpg);
+}
+
+table {
+    text-align: center;
+    background-color: gold;
+    border:solid 2px;
+    margin: auto;
+}
+
+input {
+    margin: auto;
+    text-align: center;
+    border:solid 2px black;
+    background-color: navajowhite;
+    color: black;
+}
+
+.name:hover {
+    border:solid 2px red;
+    background-color: aqua;
+    color: blueviolet;
+}
+
+.name:active {
+    border:solid 2px green;
+    background-color: yellow;
+    color: rgb(214, 158, 4);
+}
+
+.number:hover {
+    border:solid 2px rgb(224, 18, 213);
+    background-color: rgb(109, 87, 229);
+    color: rgb(208, 233, 20);
+}
+
+.number:active {
+    border:solid 2px rgb(10, 216, 230);
+    background-color: rgb(230, 116, 10);
+    color: rgb(245, 11, 11);
+}
+
+.password:hover {
+    border:solid 2px rgb(203, 240, 14);
+    background-color: rgb(192, 14, 219);
+    color: rgb(30, 6, 208);
+}
+
+.password:active {
+    border:solid 2px brown;
+    background-color: rgb(0, 255, 170);
+    color: rgb(252, 0, 243);
+}
+
+.send_button {
+    border-color: black;
+    background-color: rgb(12, 134, 240);
+    color: black;
+    width: auto;
+    height: auto;    
+}
+
+.send_button:hover {
+    border-color: rgb(12, 53, 235);
+    background-color: rgb(12, 240, 194);
+    color: rgb(19, 23, 230);
+    width: 80px;
+    height: 80px;
+}

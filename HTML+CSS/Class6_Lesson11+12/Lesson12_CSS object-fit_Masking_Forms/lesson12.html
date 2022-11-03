@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction() {
+            const name = document.getElementById("First_Name").value;
+            const last_name = document.getElementById("Last_Name").value;
+
+        localStorage.setItem("First_Name", name);
+        localStorage.setItem("Last_Name", last_name);
+        }
+    
+    </script>
+    <link rel="stylesheet" href="lesson12style.css">
+</head>
+<body>
+    <div class="container mask">
+        <div class="card">
+    <form action="lesson12form.html" target="_blank" method="GET">
+        <label class="text" for="fname">First Name</label><br>
+        <input class="input_box" type="text" name="fname" id="First_Name" placeholder="Enter Your Name"><br>
+        
+        <label class="text" for="lname">Last Name</label><br>
+        <input class="input_box" type="text" name="lname" id="Last_Name" placeholder="Enter Your Last Name"><br><br>
+        <input class="btn" type="submit" value="submit" onclick="myfunction()">
+    </form>
+        </div>
+    </div>
+</body>
+</html>

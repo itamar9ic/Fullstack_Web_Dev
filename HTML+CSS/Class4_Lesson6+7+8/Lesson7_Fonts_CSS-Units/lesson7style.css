@@ -1,0 +1,61 @@
+.BGA {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(227, 21, 21);
+    width: 25%;
+}
+.BG {
+    font-family: 'Bungee Spice', cursive;
+    background-color: rgb(24, 190, 232);
+    width: 50%;
+}
+.BB
+    {
+    font-family: 'Rubik Dirt', cursive;
+    background-color: rgb(10, 135, 244);
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+    height: auto;
+    width: auto;
+    padding: 1em;
+    margin: 1em;
+    position: relative;
+    left: auto;
+    top: auto;
+}
+
+.parent {
+    background-color: aliceblue;
+    height: auto;
+    width: auto;
+    padding: 1em;
+    margin: 1em;
+    position: relative;
+    left: auto;
+    top: auto;
+}
+
+.child {
+    background-color: aliceblue;
+    height: auto;
+    width: auto;
+    padding: 1em;
+    margin: 1em;
+    position: relative;
+    left: auto;
+    top: auto;
+}
