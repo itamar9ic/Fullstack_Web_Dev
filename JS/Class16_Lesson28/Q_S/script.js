@@ -8,14 +8,14 @@ function _copy() {
     
 
 //2
-function f(e){
-    document.getElementById('hw').textContent = `You clicked: ${e.code} Key`
-}
-addEventListener("keydown", f)
+// function f(e){
+//     document.getElementById('hw').textContent = `You clicked: ${e.code} Key`
+// }
+// addEventListener("keydown", f)
 
-// addEventListener("keydown", function(e){
-//     let s = `${e.code}`
-//     document.getElementById('hw').textContent = `You clicked: ${s[s.length-1]} Key`
-// })
+addEventListener("keydown", function(e){
+    let s = `${e.code}`
+    document.getElementById('hw').textContent = `You clicked: ${s[s.length-1]} Key`
+})
 
 // document.addEventListener("keypress",function(e){document.getElementById(hw).textContent = "you clicked: "+'${e.code} key'})
