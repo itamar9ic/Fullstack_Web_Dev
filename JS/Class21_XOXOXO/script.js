@@ -17,6 +17,7 @@ function reset() {
     for (let i = 0; i < buttonArray.length; i++) {
         buttonArray[i].textContent = "";
     }
+    counter = 0;
 }
 
 function ArrayToMatrix(arr, num) {
@@ -36,17 +37,61 @@ function ArrayToMatrix(arr, num) {
 }
 
  
-function checkForWin(matrix) {
-    // Check for a win
+function checkForWin(matrix, symbol) {
+    // this function check for all possible wining 
+    let rows_c, col_c, diagonal_c, diagonalT_c; // counters 
+
+    for (let i = 0; i < matrix.length; i++){
+        rows_c = 0, col_c = 0, diagonal_c = 0, diagonalT_c = 0; // set to zero every ittration on i
+        
+        for(let j = 0; j < matrix[i].length; j++){
+
+            if(matrix[i][j].textContent == symbol){
+                // check for row
+                    rows_c++;
+            }
+
+            if(matrix[j][i].textContent == symbol){
+                // check colum
+                    col_c++;
+            }
+            if(matrix[j][j].textContent == symbol){
+                // check main diagonal 
+                diagonal_c++;
+            }
+            if(matrix[j][matrix.length - j - 1].textContent == symbol){
+                diagonalT_c++;
+            }
+            
+        }
+        if(rows_c == matrix.length || 
+            col_c == matrix.length ||
+            diagonal_c == matrix.length ||
+            diagonalT_c == matrix.length){
+            return true;
+        }
+    }
+    return false;
 }
-function checkforTie(matrix) {
-    // Check for a tie
+
+
+
+
+
+
+function checkforTie(array) {
+    for(let i = 0; i < array.length; i++){
+        if(array[i].textContent == ''){
+            return false;
+        }
+    }
+    return true;
 }
 
 
 
 // Game Logic
-let conter = 0; // Keep track of the number of turns
+let counter = 0; // Keep track of the number of turns
 
 let buttonArray = document.querySelectorAll(".btn"); // Get all the buttons
 
@@ -55,7 +100,7 @@ buttonArray.forEach((button) => {
     coArray.push(button); // Push the buttons to the array
 });
 
-let matrix = ArrayToMatrix(coArray, 3); // Convert the array to a matrix
+let matrix = ArrayToMatrix(coArray, Math.floor(Math.sqrt(coArray.length))); // Convert the array to a matrix
 
 console.log(matrix);
 
@@ -64,17 +109,36 @@ for (let i = 0; i < buttonArray.length; i++) { // Loop through the buttons and a
 
     buttonArray[i].addEventListener("click", 
     function() {
-        if(conter % 2 == 0 && buttonArray[i].textContent == "") {
+        let symbol;
+        if(counter % 2 == 0 && buttonArray[i].textContent == "") {
             buttonArray[i].textContent = "X";
-            conter++;
-            // checkForWin(matrix); -> This is where we will check for a win
-        }else if(conter % 2 != 0 && buttonArray[i].textContent == "") {
+            counter++;     
+            symbol = 'X';
+        }else if(counter % 2 != 0 && buttonArray[i].textContent == "") {
             buttonArray[i].textContent = "O";
-            conter++;
-            // checkForWin(matrix); -> This is where we will check for a win
+            counter++;
+            symbol = 'O';
         }else{
             alert("This button is already clicked!");
         }
+
+        if(checkForWin(matrix, symbol)){
+            alert(`${symbol} has won`)
+            reset()
+        }
+
+        if(checkforTie(coArray)){
+            alert("no body won it was a Tie!")
+        }
+        
     }
 );
 }
+
+// task
+// set players name + score  when the game is over - Reset all (Score & Players Name)
+
+// previous task
+// function indexC(i,j,size){
+
+// task 10 (bonus) buttonArray

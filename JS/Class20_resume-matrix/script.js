@@ -212,7 +212,6 @@ function indexC(i,j,size){
      */
 }
 
-
 // task 10 (bonus) 3 buttonArray
 
 
