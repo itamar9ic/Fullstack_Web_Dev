@@ -7,7 +7,7 @@ let arr2 = [ 1,2,2,3,4,7,7,9]
 let mySum = (arr) => {
     let num = 0;
     for (i = 0; i < arr.length; i++) {
-        num = num + arr[i];
+        num += arr[i];
     }
     return num;
 };

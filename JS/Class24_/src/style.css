@@ -1,0 +1,14 @@
+/* center the login form in the middle of the screen */
+.signin {
+    text-align: left;
+    color: white;
+    margin: 2px;
+}
+
+body {
+    text-align: center;
+    background-image: url('https://www.int-college.co.il/wp-content/uploads/2020/06/post-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
