@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Exercise No. 6</title>
+        <script>
+          function numPressed(inumber) {
+            var sCalculatorValue = document.getElementById("calculator_value");
+
+            if(sCalculatorValue.value === '0') {
+                sCalculatorValue.value = ''
+            }
+
+            sCalculatorValue.value = sCalculatorValue.value + inumber;
+          }
+          function ClearAll() {
+            document.getElementById("calculator_value").value = '0';
+          }
+
+          function calc() {
+            var sCalculatorValue = document.getElementById("calculator_value");
+
+            sCalculatorValue.value = eval(sCalculatorValue.value);
+          }
+        </script>
+    </head>
+<body>
+    <center>
+        <input type="text" id="calculator_value" placeholder="0" style="
+    width: 277px;
+    height: 39px;
+    background-color: rgb(62, 238, 238);
+    font-size:xx-large ;
+"><br>
+    <table border="3px" cellpadding="20px">
+<tr>
+    <td><button onclick="numPressed('7')">7</button></td>
+    <td><button onclick="numPressed('8')">8</button></td>
+    <td><button onclick="numPressed('9')">9</button></td>
+    <td><button onclick="numPressed('*')">*</button></td>
+</tr>
+<tr>
+    <td><button onclick="numPressed('4')">4</button></td>
+    <td><button onclick="numPressed('5')">5</button></td>
+    <td><button onclick="numPressed('6')">6</button></td>
+    <td><button onclick="numPressed('-')">-</button></td>
+</tr>
+<tr> 
+    <td><button onclick="numPressed('1')">1</button></td>
+    <td><button onclick="numPressed('2')">2</button></td>
+    <td><button onclick="numPressed('3')">3</button></td>
+    <td><button onclick="numPressed('+')">+</button></td>
+</tr>
+<tr>
+    <td><button onclick="ClearAll()">C</button></td>
+    <td><button onclick="numPressed('0')">0</button></td>
+    <td><button onclick="numPressed('.')">.</button></td>
+    <td><button onclick="calc()">=</button></td>
+</tr>
+    </table>
+</center>
+</body>
+</html>
