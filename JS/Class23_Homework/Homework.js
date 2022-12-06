@@ -36,11 +36,43 @@
 
 
 // 1.1 bubble sort - https://en.wikipedia.org/wiki/Bubble_sort
-const bubbleSort = (arr) => {};
+let array = [3, 2, 7, 4, 6, 10];
+const bubbleSort = (array) => {
+    for (let l = 0; l <= array.length -1; l++) {
+
+        // Last l elements are already in place
+        for (let r = 0; r < (array.length -l -1); r++) {
+            
+        // Comparing two adjacent numbers 
+        // and see if first is greater than second
+            if (array[r] > array[r + 1]) {
+
+        // Swap them if the condition is true 
+            let Swap = array[r]
+            array[r] = array[r + 1]
+            array[r + 1] = Swap
+            }
+        }
+
+    };
+// Print the sorted array
+console.log(array);
+}
+
+bubbleSort(array);
+
 
 // 1.2 selection sort - https://en.wikipedia.org/wiki/Selection_sort
-
-const selectionSort = (arr) => {};
+let arr = [1,2,3,7,6,5,4,8,9,10];
+const selectionSort = (arr) => {
+min;
+    for (let i = 0; i < arr.length; i++) {
+        let min = arr[i];
+        if(arr[i+1] < min[i])
+        min = i
+    } return min
+};
+console.log(selectionSort(arr))
 
 // 1.3 insertion sort - https://en.wikipedia.org/wiki/Insertion_sort
 

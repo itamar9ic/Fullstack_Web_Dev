@@ -106,6 +106,8 @@ let myMode = (arr3) => {
     }
     return r;
 }
+
+myMode(arr3);
 //     let x = 1;
 //     let z = 0;
 //     let y;

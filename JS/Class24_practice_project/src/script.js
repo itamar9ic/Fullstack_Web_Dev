@@ -1,6 +1,7 @@
 function login() {
    let json = fetch("./data_base.json")
    .then
+    // let data_base = JSON.parse()
     let sUserName = document.getElementById("user_name").value;
     let sPassword = document.getElementById("password").value;
 
