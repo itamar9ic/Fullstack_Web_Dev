@@ -1,3 +1,24 @@
+let Data_Base;
+// let Username;
+// let Password;
+
+let json = fetch(`.../data_base`)
+        .then(r => r.jason())
+        .then(data => {
+        Data_Base = data;
+        // Username = Data_Base.test_user.username;
+        // Password = Data_Base.test_user.password;
+     })
+
+let showUser = () => {
+    alert("username: " + Data_Base.test_user.username + " password: " + Data_Base.test_user.password);
+}
+
+function redierct(link) {
+    location.assign(link);
+}
+
+
 function login() {
    let json = fetch("./data_base.json")
    .then
