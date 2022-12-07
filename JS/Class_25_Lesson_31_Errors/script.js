@@ -4,14 +4,23 @@ y=25;
 try {
     if (x + y > 100) throw "this is a big number";
     if (x + y < 100) throw "this is a small number";
-    if (x + y == 35) throw "woow!";
 } catch (err) {
         console.log(`x + y equals to ${x+y} , ${err}`)
     }
+    finally {
+        console.log(`done`);
+    }
+try {
+    if (x + y == 35) throw "woow!";
+} catch (err) {
+        console.log(`x + y equals to ${x+y}! ${err}`)
+    }
+
     // task 2
 a = "Hello World";
     try {
-    a = Number(a); throw "a is now a number"
+    a = Number(a);
+    throw "a is now a number"
 } catch (err) {
     console.log(`oops! ${err}`)
 }
@@ -20,7 +29,7 @@ a = "Hello World";
     try {
     toString(x); throw "x is now string"
 } catch (err) {
-    console.log(`oops! ${err}`)
+    console.log(`YAYYY! ${err}`)
 }
 
 
@@ -67,29 +76,29 @@ a = "Hello World";
 //     console.log(x);
 // }
 
-function f(a){
-    if(a < 0)
-        throw "inside the function error!";
-    if(a < -100)
-        throw "very small number";
-}
+// function f(a){
+//     if(a < 0)
+//         throw "inside the function error!";
+//     if(a < -100)
+//         throw "very small number";
+// }
 
-function g(a){
-    if(a < 0)
-        return "inside the function error!";
-    if(a < -100)
-        return "very small number";
-}
+// function g(a){
+//     if(a < 0)
+//         return "inside the function error!";
+//     if(a < -100)
+//         return "very small number";
+// }
 
-function h(a){
-    if(a < 0)
-        console.log("inside the function error!");
-    if(a < -100)
-        console.log("very small number");
-}
+// function h(a){
+//     if(a < 0)
+//         console.log("inside the function error!");
+//     if(a < -100)
+//         console.log("very small number");
+// }
 
 
-console.log(f(-105))
+// console.log(f(-105))
 
 
 

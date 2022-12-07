@@ -11,7 +11,7 @@ let json = fetch(`.../data_base`)
      })
 
 let showUser = () => {
-    alert("username: " + Data_Base.test_user.username + " password: " + Data_Base.test_user.password);
+    alert ("username: " + Data_Base.test_user.username + " password: " + Data_Base.test_user.password);
 }
 
 function redierct(link) {
@@ -19,20 +19,19 @@ function redierct(link) {
 }
 
 
-function login() {
-   let json = fetch("./data_base.json")
-   .then
-    // let data_base = JSON.parse()
-    let sUserName = document.getElementById("user_name").value;
-    let sPassword = document.getElementById("password").value;
+// function login() {
+//    let json = fetch("./data_base.json")
+//    .then
+//     let sUserName = document.getElementById("user_name").value;
+//     let sPassword = document.getElementById("password").value;
 
-    if (sUserName + sPassword === data_base.json) {
-     alert("wellcome username");
-    } else {
-     alert("login failed"); 
-    }
-console.log(json);
- }
+//     if (sUserName + sPassword === data_base.json) {
+//      alert("wellcome username");
+//     } else {
+//      alert("login failed"); 
+//     }
+// console.log(json);
+//  }
 
 //  function fetchData(){
 //     let json = fetch("./data_base.json")
