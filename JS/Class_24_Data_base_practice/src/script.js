@@ -1,43 +1,52 @@
 let Data_Base;
-// let Username;
-// let Password;
-
-let json = fetch(`.../data_base`)
-        .then(r => r.jason())
+// let username;
+// let password;
+let json = fetch('../data_base.json')
+        .then(r => r.json())
         .then(data => {
-        Data_Base = data;
-        // Username = Data_Base.test_user.username;
-        // Password = Data_Base.test_user.password;
-     })
+            Data_Base = data;
+        // username = Data_Base.test_user.username;
+        // password = Data_Base.test_user.password;
+     });
 
-let showUser = () => {
-    alert ("username: " + Data_Base.test_user.username + " password: " + Data_Base.test_user.password);
+let showUser = () =>{
+    alert("username: " + Data_Base.test_user.username + "\n password: " + Data_Base.test_user.password);
 }
 
-function redierct(link) {
-    location.assign(link);
+function redirect(link) {
+    window.location.assign(link);
 }
 
-
-// function login() {
-//    let json = fetch("./data_base.json")
-//    .then
-//     let sUserName = document.getElementById("user_name").value;
-//     let sPassword = document.getElementById("password").value;
-
-//     if (sUserName + sPassword === data_base.json) {
-//      alert("wellcome username");
-//     } else {
-//      alert("login failed"); 
-//     }
-// console.log(json);
-//  }
-
-//  function fetchData(){
-//     let json = fetch("./data_base.json")
-//     .then(response => response.json())
-//     .then(data => console.log(data));
+function morph () {
+    if(location.pathname == "JS/Class24_Data_base_practice/src/index.html") {
+        if(sessionStorage.getItem("isLogin") == "true"){
+            document.getElementById("user-name-h").textContent = `welcome back ${sessionStorage.getItem("username")}`;
+            document.getElementById("img-div").style.backgroundImage = "url('../static/prty.svg')";
+            document.getElementById("log").style.display = "none";
+        }else{
+            document.getElementById("logout").style.display = "none";
+        }
+        }else{
+            console.log(sessionStorage.getItem("isLogin"));
+            console.log(location.pathname);
+        }
     
-//     console.log(json);
-//     }
-    
+};
+
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    // setTimeout(() => {}, 2000);
+    if (username == Data_Base.test_user.username && password == Data_Base.test_user.password) {
+        sessionStorage.setItem("isLogin", true);
+        sessionStorage.setItem("username", Data_Base.test_user.username);
+        redirect('index.html');
+    } else {
+        alert("Wrong username or password");
+        sessionStorage.setItem("isLogin", false);
+    }
+
+ }
+
+ morph();
+

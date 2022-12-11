@@ -10,10 +10,16 @@
     <title>Home page</title>
 </head>
 <body>
-    <h1>wellcome user</h1>
-    <button onclick="redierct(`login.html`)"><h1><link rel="stylesheet" href="login.html">לינק</h1></button><br><br>
-    SVG
-    
-    
+    <div id="img-div" class="container bg-img">
+        <div class="card">    
+            <div class="card-content">
+                <h1 id="user-name-h">welcome guest</h1>  
+            </div>
+            <div class="card-content">
+                <button id="log" onclick="redirect('login.html')">Log In</button>   
+                <button id="logout" onclick="redirect('login.html')">Log out</button>   
+            </div>
+        </div>
+    </div>
 </body>
 </html>

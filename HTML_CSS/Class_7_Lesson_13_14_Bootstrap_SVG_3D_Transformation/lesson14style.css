@@ -1,0 +1,88 @@
+.nav-item > a {
+    background-color: black;
+    color: white !important;
+}
+.navbar-brand {
+    background-color: black;
+    color: white !important;
+}
+
+.page1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    padding: auto;
+    margin: auto;
+    background-color: red;
+    border: solid 1px blue;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+    transform: rotateZ(0deg);
+    }
+
+    100% {
+    transform: rotateZ(360deg);
+    }
+}
+
+.page1:hover {
+    background-color: blue;
+    border: solid 1px red;
+}
+
+.page2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    padding: auto;
+    margin: auto;
+    background-color: red;
+    border: solid 1px blue;
+    animation: change-color 3s linear infinite;
+}
+
+@keyframes change-color {
+
+    0% {
+        background-color: aqua;
+    }
+    25% {
+        background-color: aquamarine;
+    }
+    50% {
+        background-color: chartreuse;
+    }
+    75% {
+        background-color: greenyellow;
+    }
+    100% {
+        background-color: rgb(225, 156, 18);
+    }
+}
+
+.page3{
+    background-color:rgb(238, 24, 224);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    padding: auto;
+    margin: auto;
+    animation: upside 2s infinite;
+    border: solid 1px blue;
+}
+
+@keyframes upside{
+    0% {
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+
+
+
+
