@@ -49,28 +49,25 @@
 
 // node app.js
 
+// const { rejects } = require('assert');
 const fs = require('fs');
+// const { resolve } = require('path');
 
-fs.readFile('readme.txt', 'utf8', (err, data) => {
-    if (err){
-        console.log(err);
-    } let array = data.split("\n");
-    for(i in array) {
-        console.log(array[i]);
-    // } dataFile = data;
-    //     array2Data(dataFile)
-    
-  }
-});
+let Data_base
+async function splitData() {
+    await new Promise((resolve, rejects) => {
+        fs.readFile('readme.txt', 'utf8', (error, data) => {
+            if (error) {
+                console.log("Error");
+            } resolve(data)
+        })
 
-function splitData(array[i]){
-    console.log(array);
-    console.log(dataFile);
-    console.log(array.length);
-
+    }).then(data => {
+        Data_base = data.split("\n")
+    });
 }
 
-splitData();
-
+await splitData();
+console.log(Data_base);
 
 // Q.2: find the word that appeard the maximum amount of time in the text.
