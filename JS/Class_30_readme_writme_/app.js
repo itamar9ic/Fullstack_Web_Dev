@@ -54,10 +54,23 @@ const fs = require('fs');
 fs.readFile('readme.txt', 'utf8', (err, data) => {
     if (err){
         console.log(err);
-    } let array = data.toString().split("\n");
+    } let array = data.split("\n");
     for(i in array) {
         console.log(array[i]);
+    // } dataFile = data;
+    //     array2Data(dataFile)
+    
   }
 });
 
-// console.log();
+function splitData(array[i]){
+    console.log(array);
+    console.log(dataFile);
+    console.log(array.length);
+
+}
+
+splitData();
+
+
+// Q.2: find the word that appeard the maximum amount of time in the text.
