@@ -1,5 +1,10 @@
-// Pratice 2 - Fill in the empty functions 
+// localStorage.setItem("ping", "pong");
 
+// setTimeout(() => {
+//     window.location = "../../src/base.html";
+// }, 5000 )
+
+// Pratice 2 - Fill in the empty functions 
 
 // Q1: instanceOf counts the number of instances of e in a collection
 let frut = "banana";
