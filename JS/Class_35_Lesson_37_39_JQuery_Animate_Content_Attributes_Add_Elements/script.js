@@ -67,14 +67,14 @@ $(document).ready(function() {
 // lesson 38
 $(document).ready(function() {
     $("#btn-show-text").click(function() {
-        $("#text").html("this is a <mark>test</mark>")
+        $("#text-id").html("this is a <mark>test</mark>")
     });
 });
-    $("#btn-show-tag").click(function() {
-        $("#text").html("this is a <mark>test</mark>")
+    $("#btn-show-attr").click(function() {
+        $("#text-id").text($("#text-id").attr("id"));
     });
     $("#btn-show-val").click(function() {
-        $("#text").html("this is a <mark>test</mark>")
+        $("#text-id").text($("#val").val());
     });
 
 
