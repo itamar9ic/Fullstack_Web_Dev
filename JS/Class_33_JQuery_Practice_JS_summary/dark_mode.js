@@ -6,7 +6,14 @@ $("#btn").click(function() {
 });
 
 $("#btn").click(function() {
-    $(this).css("color" , "white");
+    $("body").css("color" , "white");
+});
+$("#btn").click(function() {
+    $("#btn").css("background-color" , "black");
+});
+
+$("#btn").click(function() {
+    $("#btn").css("color" , "yellow");
 });
 // local storage
 // css

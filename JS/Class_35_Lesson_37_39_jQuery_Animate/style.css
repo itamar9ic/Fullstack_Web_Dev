@@ -1,0 +1,19 @@
+#hw {
+    background-color: aqua;
+    height: 250px;
+    width: 250px;
+    display: flex;
+
+}
+#box1 {
+    background-color: blueviolet;
+    height: 250px;
+    width: 250px;
+    display: none;
+}
+#box2 {
+    background-color: greenyellow;
+    height: 250px;
+    width: 250px;
+    display: flex;
+}
